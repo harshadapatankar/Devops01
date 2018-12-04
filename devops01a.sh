@@ -15,13 +15,13 @@ echo "`df -h |grep "/dev/disk"`"
 echo ""
 
 # #Number of CPUS/Cores
-#  echo "Processors"
-#  echo "`system_profiler SPHardwareDataType | grep "Processors"`"
-#  echo ""
+ echo "Processors"
+ echo "`system_profiler SPHardwareDataType | grep "Processors"`"
+ echo ""
 
-#  echo "Cores Per Processor"
-#  echo "`system_profiler SPHardwareDataType | grep "Cores"`"
-#  echo ""
+ echo "Cores Per Processor"
+ echo "`system_profiler SPHardwareDataType | grep "Cores"`"
+ echo ""
 
 # # #Information about cpus/core
 # #  echo "Information About CPUS/Cores"
