@@ -23,24 +23,24 @@ echo ""
  echo "`system_profiler SPHardwareDataType | grep "Cores"`"
  echo ""
 
-# # #Information about cpus/core
-# #  echo "Information About CPUS/Cores"
-# #  echo "`system_profiler SPHardwareDataType | grep "Processor Name"`"
-# #  echo "`system_profiler SPHardwareDataType | grep "Processor Speed"`"
-# #  echo "`sysctl machdep.cpu.brand_string | cut -d : -f 2`"
-# #  echo ""
+#Information about cpus/core
+ echo "Information About CPUS/Cores"
+ echo "`system_profiler SPHardwareDataType | grep "Processor Name"`"
+ echo "`system_profiler SPHardwareDataType | grep "Processor Speed"`"
+ echo "`sysctl machdep.cpu.brand_string | cut -d : -f 2`"
+ echo ""
 
-# # #Mac address and ip address
-# #  echo "MAC address and IP address"
-# #  echo "MAC: `ifconfig en0 |grep ether |grep -v inet6 | cut -f 2 -d ' '`"
-# #  echo "IP:  `ifconfig en0 |grep inet |grep -v inet6 | cut -f 2 -d ' '`"
-# #  echo ""
+#Mac address and ip address
+ echo "MAC address and IP address"
+ echo "MAC: `ifconfig en0 |grep ether |grep -v inet6 | cut -f 2 -d ' '`"
+ echo "IP:  `ifconfig en0 |grep inet |grep -v inet6 | cut -f 2 -d ' '`"
+ echo ""
 
-# # #amt of ram
-# #  echo "Amount of RAM"
-# #  ramamt=`sysctl hw.memsize | cut -d : -f 2`
-# #  mem=`expr $ramamt / 1024`
-# #  mem=`expr $mem / 1024`
-# #  echo "ram: $mem MB"
+#amt of ram
+ echo "Amount of RAM"
+ ramamt=`sysctl hw.memsize | cut -d : -f 2`
+ mem=`expr $ramamt / 1024`
+ mem=`expr $mem / 1024`
+ echo "ram: $mem MB"
 
 
