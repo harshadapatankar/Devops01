@@ -23,43 +23,43 @@ if [ "$1" == "-volumes" ]; then
   echo ""
 fi
 
-# if [ "$1" == "-cpu" ]; then
-#   #Number of cpus/cores
-#   echo "Processors"
-#   echo "`system_profiler SPHardwareDataType | grep "Processors"`"
-#   echo ""
+if [ "$1" == "-cpu" ]; then
+  #Number of cpus/cores
+  echo "Processors"
+  echo "`system_profiler SPHardwareDataType | grep "Processors"`"
+  echo ""
 
-#   echo "Cores Per Processor"
-#   echo "`system_profiler SPHardwareDataType | grep "Cores"`"
-#   echo ""
+  echo "Cores Per Processor"
+  echo "`system_profiler SPHardwareDataType | grep "Cores"`"
+  echo ""
 
-#   #Information about cpus/core
-#   echo "Information About CPUS/Cores"
-#   echo "`system_profiler SPHardwareDataType | grep "Processor Name"`"
-#   echo "`system_profiler SPHardwareDataType | grep "Processor Speed"`"
-#   echo "`sysctl machdep.cpu.brand_string | cut -d : -f 2`"
-#   echo ""
-# fi
+  #Information about cpus/core
+  echo "Information About CPUS/Cores"
+  echo "`system_profiler SPHardwareDataType | grep "Processor Name"`"
+  echo "`system_profiler SPHardwareDataType | grep "Processor Speed"`"
+  echo "`sysctl machdep.cpu.brand_string | cut -d : -f 2`"
+  echo ""
+fi
 
-# if [ "$1" == "-ram" ]; then
-#   #amt of ram
-#   echo "Amount of RAM"
-#   ramamt=`sysctl hw.memsize | cut -d : -f 2`
-#   mem=`expr $ramamt / 1024`
-#   mem=`expr $mem / 1024`
-#   echo "ram: $mem MB"
-# fi
+if [ "$1" == "-ram" ]; then
+  #amt of ram
+  echo "Amount of RAM"
+  ramamt=`sysctl hw.memsize | cut -d : -f 2`
+  mem=`expr $ramamt / 1024`
+  mem=`expr $mem / 1024`
+  echo "ram: $mem MB"
+fi
 
-# if [ "$1" == "-network" ]; then
-#    #Mac address and ip address
-#   echo "MAC address and IP address"
-#   echo "MAC: `ifconfig en0 |grep ether |grep -v inet6 | cut -f 2 -d ' '`"
-#   echo "IP:  `ifconfig en0 |grep inet |grep -v inet6 | cut -f 2 -d ' '`"
-#   echo ""
-# fi
+if [ "$1" == "-network" ]; then
+   #Mac address and ip address
+  echo "MAC address and IP address"
+  echo "MAC: `ifconfig en0 |grep ether |grep -v inet6 | cut -f 2 -d ' '`"
+  echo "IP:  `ifconfig en0 |grep inet |grep -v inet6 | cut -f 2 -d ' '`"
+  echo ""
+fi
 
-# if [ "$1" == "-all" ]; then
-#   ./devops01aa.sh
-# fi
+if [ "$1" == "-all" ]; then
+  ./devops01aa.sh
+fi
 
 
